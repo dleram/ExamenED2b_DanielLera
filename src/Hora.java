@@ -1,6 +1,7 @@
 package examen;
 
 public class Hora {
+	
 	public static boolean validarHora(int horas, int minutos, int segundos) {
 		boolean resultado = true;
 		if ((horas >= 0) && (minutos >= 0) && (segundos >= 0)) {
