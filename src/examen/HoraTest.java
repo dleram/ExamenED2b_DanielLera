@@ -10,6 +10,8 @@ import org.junit.jupiter.api.Test;
 
 class HoraTest {
 
+	Hora h=new Hora();
+	
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
 	}
@@ -27,8 +29,26 @@ class HoraTest {
 	}
 
 	@Test
-	void test() {
-		fail("Not yet implemented");
+	void test1() {
+		
+		
+		@AssertsFalse(h.validarHora(0,0,-1));
 	}
+
+	@Test
+	void test2() {
+		@AssertsFalse(h.validarHora(1,1,24));
+	}
+	@Test
+	void test3() {
+		@AssertsFalse(h.validarHora(0,-1,3));
+	}
+	@Test
+	void test4() {
+		@AssertTrue(h.validarHora(20,20,20));
+	}
+
+	
+	
 
 }
